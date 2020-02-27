@@ -136,7 +136,6 @@ def prompt():
         render()
     else:
         print("Invalid command")
-        eval(command)
     prompt()
 
 #Move
