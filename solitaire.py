@@ -7,8 +7,8 @@ import time
 w = 0
 
 #Card init
-suits = ["s","h","c","d"]
-nums = ["a","2","3","4","5","6","7","8","9","t","j","q","k"]
+suits = ("s","h","c","d")
+nums = ("a","2","3","4","5","6","7","8","9","t","j","q","k")
 cards = []
 for s in suits:
     for n in nums:
@@ -17,7 +17,7 @@ for s in suits:
 #(a)Col init
 cols = []
 acols = []
-for i in ["col1","col2","col3","col4","col5","col6","col7","acols","acolh","acolc","acold"]:
+for i in ("col1","col2","col3","col4","col5","col6","col7","acols","acolh","acolc","acold"):
     if i[0] == "a":
         i = []
         acols.append(i)
