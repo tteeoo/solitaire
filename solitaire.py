@@ -182,6 +182,8 @@ def m(command):
                 print("Colors of stacked cards must alternate")
             elif nums[nums.index(card[1]) + 1] != nums[nums.index(cols[dcol][-1][1])]:
                 print("Stacked cards must be in descending order")
+            elif cols[dcol] == []:
+                print("Only kings can be stacked on empty columns")
             else:
                 cards.remove(card)
                 cols[dcol].append(card + "u")
