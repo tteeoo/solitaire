@@ -129,18 +129,20 @@ def render():
 def prompt():
     global cols, w
     command = input("solitaire> ")
-    command += " "
-    if command[0] == "m":
-        try:
-            m(command)
-        except:
-            print("Invalid move parameters")
-    elif command == " ":
+    if command != "":
+        command = command.split()
+    if command == "":
         d()
-    elif command == "r ":
-        render()
     else:
-        print("Invalid command")
+        try:
+            if len(command) == 3:
+                m(command[1]+command[2]+command[3])
+            elif len(command) == 2:
+                m(command[1]+command[2])
+            else:
+                raise CommandError
+        except:
+            print("Invalid move arguments")
     prompt()
 
 #Move
