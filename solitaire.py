@@ -115,8 +115,13 @@ def render():
         pass
 
     #Print
-    for i in orows:
-        print(i.rjust(28))
+    print("-01--02--03--04--05--06--07-") 
+    for i in range(len(orows)):
+        print(orows[i].rjust(28), end="")
+        if len(str(i+1)) == 1:
+            print(" -0"+str(i+1)+"-")
+        else:
+            print(" -"+str(i+1)+"-")
     print(f"\n{oacols}")
     print(f"{ocards}\n")
 
