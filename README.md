@@ -17,6 +17,8 @@ Below the 4 piles, is the rest of the deck, with one card exposed.
 ### Cards
 Cards' names consist of two letters, the first being the first letter of their suit, and the second being what type of card.
 
+Face-down cards are representing with two hyphens.
+
 I'm sure you can figure out how to interpret them.
 
 ### Commands
