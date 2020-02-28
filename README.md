@@ -1,6 +1,8 @@
 # solitaire
 Solitaire in the terminal with python
 
+![image](https://i.ibb.co/0jxzvd7/solitaire.png)
+
 # How to play
 ### Running
 To start, simply run `python3 solitaire.py`
