@@ -26,21 +26,21 @@ When explaining the commands, I assume already know how to play klondike solitai
 
 #### To move a card from one column to another, run:
 
-  `m<source column #><source row #><destination column #>`
+  `<source column #> <source row #> <destination column #>`
 
   For example:
 
-  `m342`: attempts to move the card in the `3`rd column that is `4` cards down, to the `2`nd column.
+  `3 4 2`: attempts to move the card in the `3`rd column that is `4` cards down, to the `2`nd column.
   
 <hr>
 
 #### To move a card from a column to its suit's pile, run:
   
-  `ma<source column #>`
+  `a <source column #>`
   
   For example:
   
-  `ma3`: attempts to move the card at the bottom of the `3`rd column to its suit's pile.
+  `a 3`: attempts to move the card at the bottom of the `3`rd column to its suit's pile.
  
 <hr>
   
@@ -48,9 +48,9 @@ When explaining the commands, I assume already know how to play klondike solitai
 
   For example:
   
-  `m05`: attempts to move the card on top of the deck to the bottom of column `5`
+  `0 5`: attempts to move the card on top of the deck to the bottom of column `5`
   
-  `ma0`: attempts to move the card on top of the deck to its suit's pile
+  `a 0`: attempts to move the card on top of the deck to its suit's pile
 
 #### To draw a new card, simply press the enter key
 
