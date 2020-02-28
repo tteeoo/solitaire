@@ -194,8 +194,8 @@ def m(command):
                 cols[dcol].append(card + "u")
                 render()
     elif command[0] == "a":
-        if command[2] != "0":
-            scol = int(command[2]) - 1
+        if command[1] != "0":
+            scol = int(command[1]) - 1
             card = cols[scol][-1]
             for i in range(len(suits)):
                 if card[0] == suits[i]:
