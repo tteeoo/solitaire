@@ -5,6 +5,8 @@ Solitaire in the terminal with python
 ### Running
 To start, simply run `python3 solitaire.py`
 
+Or, play in browser at: https://solitaire.theohenson.repl.run/
+
 ### The game board
 When started, the 7 columns of cards are displayed at the top.
 
