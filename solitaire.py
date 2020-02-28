@@ -176,7 +176,7 @@ def m(command):
                 render()
     elif command[0] == "0":
         card = cards[0]
-        dcol = int(command[2]) - 1
+        dcol = int(command[1]) - 1
         if card[1] != "k":
             if color(card) == color(cols[dcol][-1]):
                 print("Colors of stacked cards must alternate")
