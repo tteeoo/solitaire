@@ -135,12 +135,7 @@ def prompt():
         d()
     else:
         try:
-            if len(command) == 3:
-                m(command[1]+command[2]+command[3])
-            elif len(command) == 2:
-                m(command[1]+command[2])
-            else:
-                raise CommandError
+            m(command)
         except:
             print("Invalid move arguments")
     prompt()
@@ -148,10 +143,10 @@ def prompt():
 #Move
 def m(command):
     global cols, acols, nums, suits
-    if command[1] != "0" and command[1] != "a":
-        scol = int(command[1]) - 1 
-        srow = int(command[2]) - 1
-        dcol = int(command[3]) - 1
+    if command[0] != "0" and command[0] != "a":
+        scol = int(command[0]) - 1 
+        srow = int(command[1]) - 1
+        dcol = int(command[2]) - 1
         card = cols[scol][srow]
         if card[1] != "k":
             if card[2] == "d":
@@ -179,7 +174,7 @@ def m(command):
                     cols[scol].remove(card)
                     cols[dcol].append(card)
                 render()
-    elif command[1] == "0":
+    elif command[0] == "0":
         card = cards[0]
         dcol = int(command[2]) - 1
         if card[1] != "k":
@@ -198,7 +193,7 @@ def m(command):
                 cards.remove(card)
                 cols[dcol].append(card + "u")
                 render()
-    elif command[1] == "a":
+    elif command[0] == "a":
         if command[2] != "0":
             scol = int(command[2]) - 1
             card = cols[scol][-1]
