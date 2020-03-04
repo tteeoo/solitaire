@@ -245,9 +245,12 @@ def m(command):
 #Draw
 def d():
     global cards
-    card = cards[0]
-    cards.remove(card)
-    cards.append(card)
+    try:
+        card = cards[0] 
+        cards.remove(card)
+        cards.append(card)
+    except:
+        pass
     render()
 
 #Color
