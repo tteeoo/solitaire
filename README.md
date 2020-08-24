@@ -9,7 +9,7 @@ The rest of this file assumes you already know how to play [Klondike solitaire](
 ### Running
 To start, simply run the file `solitaire.py` with a Python interpreter.
 
-Or play on the web at: https://solitaire.theohenson.repl.run/
+Or play on the web at https://solitaire.theohenson.repl.run.
 
 ### The game board
 When started, the seven columns of cards are displayed at the top.
