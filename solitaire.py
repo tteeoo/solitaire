@@ -1,38 +1,9 @@
 #!/usr/bin/env python3
 
 import os
+import sys
 import random
 import readline
-
-w = 0
-
-# Card init
-suits = ("s","h","c","d")
-nums = ("a","2","3","4","5","6","7","8","9","t","j","q","k")
-cards = []
-for s in suits:
-    for n in nums:
-        cards.append(s + n)
-
-# Initialize columns and foundations
-cols = []
-fcols = []
-for i in range(7):
-    cols.append([])
-for i in range(4):
-    fcols.append([])
-
-
-# Populate
-for c in range(len(cols)):
-    for i in range(c + 1):
-        card = random.choice(cards)
-        if i == c: cols[c].append(card + "u")
-        else: cols[c].append(card + "d")
-        cards.remove(card)
-
-# Shuffle
-random.shuffle(cards)
 
 # Render
 def render():
@@ -250,16 +221,95 @@ def d():
         pass
     render()
 
-# Color
+# Helper function to get card color
 def color(card):
-    if card[0] == "s" or card[0] == "c":
-        return "black"
-    if card[0] == "h" or card[0] == "d":
-        return "red"
+    if card[0] == "s" or card[0] == "c": return "black"
+    elif card[0] == "h" or card[0] == "d": return "red"
 
 # Win
 def win():
     print("You win!")
+    exit(0)
 
+if len(sys.argv) > 1:
+    # Help
+    if sys.argv[1] == "-h" or sys.argv[1] == "--help":
+        print("usage: " + sys.argv[0] + " [-h | -V]\n")
+        print("options:\n    -h, --help:     display this help\n    -V, --version:  display version\n")
+        print("""how to play (assuming you already know how to play klondike solitaire):
+
+the game board
+==============
+
+When started, the seven columns of cards are displayed at the top.
+The four foundations (where stacks of suits go) are located under the columns.
+Below the four foundations is the rest of the deck, with one card exposed.
+
+cards
+=====
+
+Cards' names consist of two letters, the first being the first letter of their suit, and the second representing the type of the card.
+Face-down cards are shown with two hyphens.
+
+commands
+========
+
+The game is controlled via typed commands.
+Under all the cards will be a prompt to enter said commands.
+
+- To move a card from one column to another, run:
+<source column #> <source row #> <destination column #>
+For example:
+3 4 2: attempts to move the card in the 3rd column that is 4 cards down, to the 2nd column.
+
+- To move a card from a column to its suit's foundations, run:
+a <source column #>
+For example:
+a 3: attempts to move the card at the bottom of the 3rd column to its suit's foundation.
+
+- To refer to the card on the top of the deck, use 0
+For example:
+0 5: attempts to move the card on top of the deck to the bottom of column 5.
+a 0: attempts to move the card on top of the deck to its suit's foundation.
+
+- To draw a new card press enter
+""")
+        print("MIT License, Theo Henson <theodorehenson at protonmail dot com>")
+
+    # Version
+    elif sys.argv[1] == "-V" or sys.argv[1] == "--version":
+        print("0.1.0")
+    exit(0)
+
+# Card init
+w = 0
+suits = ("s","h","c","d")
+nums = ("a","2","3","4","5","6","7","8","9","t","j","q","k")
+cards = []
+for s in suits:
+    for n in nums:
+        cards.append(s + n)
+
+# Initialize columns and foundations
+cols = []
+fcols = []
+for i in range(7):
+    cols.append([])
+for i in range(4):
+    fcols.append([])
+
+# Populate
+for c in range(len(cols)):
+    for i in range(c + 1):
+        card = random.choice(cards)
+        if i == c: cols[c].append(card + "u")
+        else: cols[c].append(card + "d")
+        cards.remove(card)
+
+# Shuffle
+random.shuffle(cards)
+
+# Start REPL
 render()
-prompt()
+try: prompt()
+except (KeyboardInterrupt, EOFError): pass
