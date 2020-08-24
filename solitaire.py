@@ -1,8 +1,8 @@
-import readline
-import random
-import time
+#!/usr/bin/env python3
+
 import os
-import time
+import random
+import readline
 
 w = 0
 
