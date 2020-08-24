@@ -139,7 +139,7 @@ def prompt():
 
 # Move
 def m(command):
-    global cols, acols, nums, suits
+    global cols, fcols, nums, suits
     if command[0] != "0" and command[0] != "a":
         scol = int(command[0]) - 1 
         srow = int(command[1]) - 1
