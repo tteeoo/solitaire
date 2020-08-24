@@ -1,13 +1,11 @@
 # solitaire
-Solitaire in the terminal with python
-
 ![image](https://i.ibb.co/0jxzvd7/solitaire.png)
 
 # How to play
 The rest of this file assumes you already know how to play [Klondike solitaire](https://en.wikipedia.org/wiki/Klondike_\(solitaire\)).
 
 ### Running
-To start, simply run the file `solitaire.py` with a Python interpreter.
+To start, simply run the file `solitaire.py` with a Python 3 interpreter.
 
 Or play on the web at https://solitaire.theohenson.repl.run.
 
