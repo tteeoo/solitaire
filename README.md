@@ -9,7 +9,7 @@ To start, simply run the file `solitaire.py` with a Python 3 interpreter.
 
 Or play on the web at https://solitaire.theohenson.repl.run.
 
-### The game board
+### The Game Board
 When started, the seven columns of cards are displayed at the top.
 
 The four foundations (where stacks of suits go) are located under the columns.
@@ -51,7 +51,7 @@ Under all the cards will be a prompt to enter said commands (shown as `solitaire
   
   `a 0`: attempts to move the card on top of the deck to its suit's foundation.
 
-#### To draw one new card press enter 
+#### To draw a new card press enter 
 
 # License
 All files are licensed under the MIT License.
