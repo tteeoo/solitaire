@@ -89,6 +89,7 @@ def render():
             print(" -0"+str(i+1)+"-")
         else:
             print(" -"+str(i+1)+"-")
+    print("")
     print(ofcols)
     print(ocards)
     print("")
